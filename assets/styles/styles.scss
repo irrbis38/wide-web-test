@@ -1,0 +1,75 @@
+@import "./reset.css";
+
+/* lato regular */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato-Regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/Lato-Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/Lato-Regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Lato-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* lato medium */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Lato-Medium.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/Lato-Medium.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/Lato-Medium.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Lato-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* lato bold */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Lato-Bold.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/Lato-Bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/Lato-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Lato-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+/*===== variables =====*/
+
+:root {
+  --font-dark: #102746;
+  --font-ligth: #fff;
+}
+
+/*===== main styles =====*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--font-dark);
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  background-color: #f00;
+}
