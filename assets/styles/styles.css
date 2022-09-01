@@ -539,3 +539,124 @@ a {
 .inspired__second .inspired__about {
   margin-bottom: 94px;
 }
+
+/*===== places styles =====*/
+.places {
+  padding-bottom: 144px;
+}
+
+.places__title {
+  margin-bottom: 64px;
+  position: relative;
+}
+.places__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  height: 2px;
+  width: 253px;
+  background-color: var(--color-light-blue);
+}
+
+.places__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 58px;
+}
+
+.places__img {
+  position: relative;
+  margin-bottom: 45px;
+}
+.places__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.places__info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 25px;
+  background-color: rgba(21, 24, 36, 0.6);
+  color: var(--font-light);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.places__item:hover .places__info {
+  opacity: 1;
+}
+
+.places__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.places__statistic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.places__statistic img:nth-child(2) {
+  margin-right: 14px;
+}
+
+.places__counter {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.places__counter:first-child {
+  margin-right: 4px;
+}
+.places__counter:nth-child(3) {
+  margin-right: 9px;
+}
+
+.places__text {
+  margin-bottom: 31px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--font-dark);
+}
+
+.places__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 118px;
+  height: 42px;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--font-light);
+  background-color: var(--color-blue);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.places__link:hover {
+  background-color: var(--color-light-blue);
+}
