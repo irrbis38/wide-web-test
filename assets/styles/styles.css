@@ -1,4 +1,4 @@
-@import './reset.css';
+@import "./reset.css";
 /* lato regular */
 @font-face {
   font-family: "Lato";
@@ -28,7 +28,7 @@
   --font-dark: #102746;
   --font-light: #fff;
   --color-blue: #1b7dff;
-  --color-light-blue: #03a9f4;
+  --color-light-blue: #006dfe;
 }
 
 /*===== main styles =====*/
@@ -70,6 +70,29 @@ a {
   font-size: 35px;
   line-height: 42px;
   color: var(--font-dark);
+}
+
+.more__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.more__link span {
+  margin-right: 26px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-light-blue);
+}
+.more__link img {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.more__link:hover img {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 /*===== intor styles =====*/
@@ -336,17 +359,183 @@ a {
   color: #000;
 }
 
-.benefits__link span {
-  margin-right: 26px;
+/*===== inspired styles =====*/
+.inspired {
+  padding-bottom: 139px;
+}
+
+.inspired__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 46px;
+}
+
+.inspired__title {
+  position: relative;
+}
+.inspired__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  height: 2px;
+  width: 253px;
+  background-color: var(--color-light-blue);
+}
+
+.inspired__1 {
+  grid-area: insp1;
+}
+
+.inspired__2 {
+  grid-area: insp2;
+}
+
+.inspired__3 {
+  grid-area: insp3;
+}
+
+.inspired__4 {
+  grid-area: insp4;
+}
+
+.inspired__5 {
+  grid-area: insp5;
+}
+
+.inspired__gallery {
+  display: grid;
+  grid-template-areas: "insp1 insp1 insp1 insp2 insp2 insp2" "insp3 insp3 insp4 insp4 insp5 insp5";
+  grid-template-rows: 354px 283px;
+  gap: 10px;
+  margin-bottom: 130px;
+}
+
+.inspired__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.inspired__img {
+  width: 100%;
+  height: 100%;
+}
+.inspired__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inspired__name {
+  position: absolute;
+  bottom: 29px;
+  left: 27px;
+  z-index: 10;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  color: var(--font-light);
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  opacity: 1;
+}
+
+.inspired__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: rgba(21, 24, 36, 0.4);
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  opacity: 1;
+}
+
+.inspired__item:hover .inspired__overlay,
+.inspired__item:hover .inspired__name {
+  opacity: 0;
+}
+
+.inspired__places {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.inspired__place {
+  display: grid;
+  -webkit-column-gap: 8.54%;
+     -moz-column-gap: 8.54%;
+          column-gap: 8.54%;
+}
+
+.inspired__first {
+  grid-template-columns: 47.23% 41.06%;
+  grid-template-rows: 354px;
+  margin-bottom: 77px;
+}
+
+.inspired__second {
+  grid-template-columns: 41.06% 47.23%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.inspired__picture {
+  width: 100%;
+  height: 100%;
+}
+.inspired__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inspired__info {
+  padding-top: 26px;
+}
+
+.inspired__header {
+  max-width: 357px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--font-dark);
+}
+
+.inspired__about {
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #006dfe;
+  color: var(--font-dark);
 }
-.benefits__link img {
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+
+.inspired__first .inspired__header {
+  margin-bottom: 85px;
 }
-.benefits__link:hover img {
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
+.inspired__first .inspired__about {
+  margin-bottom: 58px;
+}
+
+.inspired__second .inspired__header {
+  margin-bottom: 45px;
+}
+.inspired__second .inspired__about {
+  margin-bottom: 94px;
 }
