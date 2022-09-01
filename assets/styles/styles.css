@@ -129,6 +129,7 @@ a {
   height: auto;
 }
 .intro__logo a {
+  outline: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -156,6 +157,7 @@ a {
   position: relative;
   color: var(--font-light);
   font-size: 18px;
+  outline: none;
 }
 .intro__link a::after {
   position: absolute;
@@ -212,12 +214,12 @@ a {
   margin-right: 60px;
 }
 
-#input-what,
-#input-where {
+#checkbox-what,
+#checkbox-where {
   display: none;
 }
-#input-what:checked + .checkbox__btn div,
-#input-where:checked + .checkbox__btn div {
+#checkbox-what:checked + .checkbox__btn div,
+#checkbox-where:checked + .checkbox__btn div {
   display: block;
 }
 
@@ -720,6 +722,7 @@ a {
   position: relative;
 }
 .footer__img a {
+  outline: none;
   position: absolute;
   top: 0;
   right: 0;

@@ -14,20 +14,28 @@
   </head>
   <body>
     <!-- intro -->
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="intro__container">
         <header class="intro__header">
           <div class="intro__wrapper">
             <div class="intro__logo">
               <img src="./assets/icons/logo.svg" alt="logo" />
-              <a href="#"></a>
+              <a href="#" id="intro-logo"></a>
             </div>
             <nav class="intro__menu">
               <ul>
-                <li class="intro__link"><a href="#">Articles</a></li>
-                <li class="intro__link"><a href="#">Locations</a></li>
-                <li class="intro__link"><a href="#">Videos</a></li>
-                <li class="intro__link"><a href="#">Sign in</a></li>
+                <li class="intro__link">
+                  <a href="#articles" class="intro__linkItem">Articles</a>
+                </li>
+                <li class="intro__link">
+                  <a href="#locations" class="intro__linkItem">Locations</a>
+                </li>
+                <li class="intro__link">
+                  <a href="#videos" class="intro__linkItem">Videos</a>
+                </li>
+                <li class="intro__link">
+                  <a href="#">Sign in</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -44,23 +52,23 @@
         <form action="#" class="intro__search">
           <div class="intro__what">
             <div class="input__block">
-              <input type="checkbox" id="input-what" />
+              <input type="checkbox" id="checkbox-what" />
               <div class="checkbox__btn">
                 <div></div>
               </div>
-              <label for="input-what">What would you like to do?</label>
+              <label for="checkbox-what">What would you like to do?</label>
             </div>
-            <input type="text" class="intro__input" />
+            <input type="text" class="intro__input" id="input-what" />
           </div>
           <div class="intro__where">
             <div class="input__block">
-              <input type="checkbox" id="input-where" />
+              <input type="checkbox" id="checkbox-where" />
               <div class="checkbox__btn">
                 <div></div>
               </div>
-              <label for="input-where">Where would you like to go?</label>
+              <label for="checkbox-where">Where would you like to go?</label>
             </div>
-            <input type="text" class="intro__input" />
+            <input type="text" class="intro__input" id="input-where" />
           </div>
           <button class="search__btn">search</button>
         </form>
@@ -130,7 +138,7 @@
       </div>
     </section>
     <!-- inspired -->
-    <section class="inspired">
+    <section class="inspired" id="articles">
       <div class="container">
         <div class="inspired__intro">
           <h2 class="inspired__title title">Get inspired for your next trip</h2>
@@ -225,7 +233,7 @@
       </div>
     </section>
     <!-- places -->
-    <section class="places">
+    <section class="places" id="locations">
       <div class="container">
         <h2 class="places__title title">Today top places to visit</h2>
         <div class="places__wrapper">
@@ -359,7 +367,7 @@
       </div>
     </section>
     <!-- video -->
-    <section class="video">
+    <section class="video" id="videos">
       <div class="video__overlay">
         <img
           src="./assets/images/video-bg.png"
@@ -384,7 +392,7 @@
         <div class="footer__logo">
           <div class="footer__img">
             <img src="./assets/icons/logo.svg" alt="logo" />
-            <a href="#"></a>
+            <a href="#intro" id="footer-logo"></a>
           </div>
         </div>
         <div class="footer__nav">
@@ -420,5 +428,6 @@
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
