@@ -1,3 +1,5 @@
+const body = document.body;
+
 //scroll
 const allIntroLinks = document.querySelectorAll(".intro__linkItem");
 
@@ -60,3 +62,27 @@ const videoOverlay = document.querySelector(".video__overlay");
 videoOverlay.addEventListener("click", () => {
   videoOverlay.classList.add("hidden");
 });
+
+// burger menu
+const introBurger = document.querySelector(".intro__burger");
+const burgerMenu = document.querySelector(".burger__menu");
+const overlay = document.querySelector(".overlay");
+const allBurgerLink = document.querySelectorAll(".burger__link");
+
+const removeClasses = () => {
+  body.classList.remove("lock");
+  introBurger.classList.remove("active");
+  burgerMenu.classList.remove("active");
+  overlay.classList.remove("active");
+};
+
+introBurger.addEventListener("click", () => {
+  body.classList.toggle("lock");
+  introBurger.classList.toggle("active");
+  burgerMenu.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", removeClasses);
+
+allBurgerLink.forEach((item) => item.addEventListener("click", removeClasses));
